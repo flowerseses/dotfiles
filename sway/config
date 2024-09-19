@@ -34,7 +34,7 @@ output * bg /home/iva/images/wallpap/blr.jpg fill
 #
 exec swayidle -w \
      timeout 300 'swaylock -f' \
-     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+     timeout 1800 'swaymsg "output * dpms suspend"' resume 'swaymsg "output * dpms on"' \
      before-sleep 'swaylock -f'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -74,7 +74,8 @@ exec_always {
 # outputs
 output DP-7 transform 270
 output DP-7 resolution 3840x2160 position 0,0
-output eDP-1 resolution 1920x1200 position 2160,1800
+output DP-6 resolution 3840x2160@60Hz position 2160,0
+output eDP-1 resolution 1920x1200 position 3000,2160
 
 ### Input configuration
 #
@@ -253,6 +254,20 @@ smart_gaps on
 gaps inner 10
 
 exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+
+# Default workspace stuff
+workspace number 1
+exec alacritty
+workspace number 2
+exec firefox
+workspace number 3
+exec pycharm-professional
+workspace number 4
+exec emacs
+workspace number 5
+exec signal
+
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 
 include /etc/sway/config.d/*
