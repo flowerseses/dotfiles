@@ -54,6 +54,8 @@ exec_always gsettings set $gnome-schema gtk-application-prefer-dark-theme true
 exec_always gsettings set $gnome-schema icon-theme Papirus-Dark
 exec_always gsettings set $gnome-schema cursor-theme Adwaita
 
+# start the notification manager
+exec --no-startup-id dunst
 
 # set stuff
 set $mod Mod4
