@@ -6,8 +6,8 @@ Look, ok. wayland is not it. not yet - While I managed to get it working smoothl
 ## Requirements
 `sway, waybar, way-displays, swayidle, swaylock`
 
-`fuzzel` as a launch menu
-`mako` as a notification manager
-`grimshot` for screenshots
-`alacritty` or another terminal emulator of choice
-`polkit-gnome`/`polkit-gnome-authentication-agent` to fix issues with the default polkit, which is hella broken in wayland.
+`fuzzel` as a launch menu  
+`mako` as a notification manager  
+`grimshot` for screenshots  
+`alacritty` or another terminal emulator of choice  
+`polkit-gnome`/`polkit-gnome-authentication-agent` to fix issues with the default polkit, which is hella broken in wayland.  
