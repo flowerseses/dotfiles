@@ -43,6 +43,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 exec_always feh --bg-fill /home/iva/images/wallpap/blr.jpg
 
+exec --no-startup-id source ~/.fehbg
+bindsym $mod+Shift+L exec betterlockscreen -l dim
+
 # gtk
 set $gnome-schema org.gnome.desktop.interface
 
