@@ -122,7 +122,7 @@ typeset -U path PATH
 path=(~/.local/bin $path)
 export PATH
 
-## Env vars
+## Env vars - might not need this.
 export DOCKER_COMPOSE_PATH=docker-compose
 
 ## set up openvpn
@@ -132,18 +132,19 @@ alias bfvpn="sudo openconnect https://dee.vpn.basefarm.com/"
 ##alias wifi_conn="nmcli device wifi connect <network> password <password>"
 
 ## ruby bullshit
-export GEM_HOME="$HOME/gems"
+#export GEM_HOME="$HOME/gems"
 
-source /home/iva/tools/google-cloud-cli/pkg/google-cloud-cli/opt/google-cloud-cli/path.zsh.inc
-source /home/iva/tools/google-cloud-cli/pkg/google-cloud-cli/opt/google-cloud-cli/completion.zsh.inc
-export PATH="/home/iva/.local/share/gem/ruby/3.0.0/bin:$PATH"
+#source /home/iva/tools/google-cloud-cli/pkg/google-cloud-cli/opt/google-cloud-cli/path.zsh.inc
+#source /home/iva/tools/google-cloud-cli/pkg/google-cloud-cli/opt/google-cloud-cli/completion.zsh.inc
+#export PATH="/home/iva/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
 export USE_CONDA=false
 
+# Add doom emacs to the path
+#export PATH="$HOME/.config/emacs/bin:$HOME/tools/idea/idea-IC-251.23774.435/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$HOME/gems/bin:$PATH:$HOME/.rvm/bin"
-
+#export PATH="$HOME/gems/bin:$PATH:$HOME/.rvm/bin"
